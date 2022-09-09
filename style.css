@@ -1,0 +1,21 @@
+/*
+ p + a -> sonraki a
+ p ~ a -> sonraki tüm a'lar
+ p > a -> anın üst elemanı p ise <p><a> ...
+ ul li a -> iç içe
+ ul#id -> hem ul hemde id ise
+ a[nitelik] -> o niteliğe sahip olanlar. a[target] ... a[target="_blank"]
+ a::after -> sonradan yapılıcak işlemler
+ a::before -> önceden yapılan işlemler
+ a[class|="box"] başında o kelime geçiyorsa çalışır (box, box-small)
+ div[class^="box"] -> başında direk o kelime geçiyorsa çalışır (boxsmall, box-small ,boxman)
+ div[class$="box"] -> sonu box ile biten kelimeleri seçer
+ div[class*="box"] -> herhangi bir yerinde box geçerse çalışır
+ -> Eğer büyük küçük harf duyarlılığı kaldırmak isterseniz "i" (insensitive) flagı ekleyin
+ content: attr(deneme); <a deneme="Selam">Selam</a>
+ */
+
+ div[class*="box"] {
+    color: red;
+    content: attr(attribute);
+ }
